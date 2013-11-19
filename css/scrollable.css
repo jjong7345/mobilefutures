@@ -1,0 +1,237 @@
+
+
+/*
+  root element for the scrollable.
+  when scrolling occurs this element stays still.
+  */
+.scrollable {
+
+    /* required settings */
+    position:relative;
+    overflow:hidden;
+    width: 860px;
+    height:484px;
+
+    /* custom decorations */
+}
+
+/*
+   root element for scrollable items. Must be absolutely positioned
+   and it should have a extremely large width to accomodate scrollable
+   items.  it's enough that you set the width and height for the root
+   element and not for this element.
+*/
+.scrollable .items {
+    /* this cannot be too large */
+    width:20000em;
+    position:absolute;
+    clear:both;
+}
+
+.items div.item {
+    float:left;
+    width:860px;
+}
+
+/* single scrollable item */
+.scrollable .item-content {
+    float:left;
+    margin:0;
+    padding:0;
+    border:none;
+    width:860px;
+    height:484px;
+	position: relative;
+}
+
+.item-text {
+	position: absolute;
+	/*
+	bottom: 70px;
+	left: 72px;
+	width: 670px;
+	*/
+	bottom: 30px; 
+	left: 25px; 
+	width: 810px;
+}
+
+.item-text .blurb {
+	padding: 5px 0px 10px 0px; 
+	border-top: 1px solid #E1E8F1;
+}
+
+.item-text .blurb p {
+	padding: 0 4px;
+	font-family: 'Arial',Arial,sans-serif;
+	font-size: 15px; 
+	line-height: 17px;
+	text-align: left;
+}
+/*
+.item-text p {
+	font-size: 15px;
+	font-weight: normal;
+	text-align: left;
+	line-height: 140%;
+}
+*/
+.item-text a.more {
+	background: url(../images/icon-more.gif) right center no-repeat;
+	padding-right: 19px;
+}
+
+.logo-kiip {
+	background: url(../images/logo-kiip.png) left top no-repeat;
+	width: 126px;
+	border-right: 1px solid #E1E8F1;
+}
+
+.logo-banjo {
+	background: url(../images/logo-banjo.png) left top no-repeat;
+	width: 126px;
+	border-right: 1px solid #E1E8F1;
+}
+
+.logo-daylibreak {
+	background: url(../images/logo-daylibreak.png) left top no-repeat;
+	width: 126px;
+	border-right: 1px solid #E1E8F1;
+}
+
+.logo-inmarket {
+	background: url(../images/logo-inmarket.png) left top no-repeat;
+	width: 126px;
+	border-right: 1px solid #E1E8F1;
+}
+/*
+.logo-lisnr {
+	background: url(../images/logo-lisnr.png) left top no-repeat;
+	width: 126px;
+	border-right: 1px solid #E1E8F1;
+}
+*/
+.logo-shelby {
+	background: url(../images/logo-shelby.png) left top no-repeat;
+	width: 126px;
+	border-right: 1px solid #E1E8F1;
+}
+
+.logo-waze {
+	background: url(../images/logo-waze.png) left top no-repeat;
+	width: 126px;
+	border-right: 1px solid #E1E8F1;
+}
+
+.logo-endorse {
+	background: url(../images/logo-endorse.png) left top no-repeat;
+	width: 126px;
+	border-right: 1px solid #E1E8F1;
+}
+
+/* recently added logos below */
+
+.logo-lisnr {
+	background: url(../images/logo-lisnr_solo.png) left top no-repeat;
+	width: 126px;
+	border-right: 1px solid #E1E8F1;
+}
+
+.logo-roximity {
+	background: url(../images/logo-roximity_solo.png) left top no-repeat;
+	width: 126px;
+	border-right: 1px solid #E1E8F1;
+}
+
+.item-text .logo {
+	padding: 0 0 5px 4px; 
+	width: 100%;
+}
+
+/* recently added logos above */
+
+
+.item-text td {
+	padding: 0 15px 0 15px;
+	font-size: 15px;
+}
+
+/* active item */
+.scrollable .active {
+    border:2px solid #000;
+    position:relative;
+    cursor:default;
+}
+
+
+
+/* this makes it possible to add next button beside scrollable */
+.scrollable {
+    float:left;
+}
+
+/* prev, next, prevPage and nextPage buttons */
+a.browse {
+    background:url(/images/hori_large.png) no-repeat;
+    display:block;
+    width:30px;
+    height:30px;
+    float:left;
+    margin:40px 10px;
+    cursor:pointer;
+    font-size:1px;
+}
+
+/* right */
+a.right { background-position: 0 -30px; clear:right; margin-right: 0px;}
+a.right:hover { background-position:-30px -30px; }
+a.right:active { background-position:-60px -30px; }
+
+
+/* left */
+a.left { margin-left: 0px; }
+a.left:hover  { background-position:-30px 0; }
+a.left:active { background-position:-60px 0; }
+
+/* up and down */
+a.up, a.down  {
+    background:url(/images/vert_large.png) no-repeat;
+    float: none;
+    margin: 10px 50px;
+}
+
+/* up */
+a.up:hover { background-position:-30px 0; }
+a.up:active { background-position:-60px 0; }
+
+/* down */
+a.down { background-position: 0 -30px; }
+a.down:hover { background-position:-30px -30px; }
+a.down:active { background-position:-60px -30px; }
+
+
+/* disabled navigational button */
+a.disabled {
+    visibility:hidden !important;
+}
+
+.scroll-nav {
+	margin: 0;
+	position: absolute;
+	z-index: 100;
+	bottom: 20px;
+	left: 340px;
+}
+
+
+#navigator li {
+	float: left;
+	background: url(../images/dot.png) left top no-repeat;
+	width: 20px;
+	height: 19px;
+	cursor: pointer;
+}
+
+#navigator li.active {
+	background: url(../images/dot-over.png) left top no-repeat;
+}
